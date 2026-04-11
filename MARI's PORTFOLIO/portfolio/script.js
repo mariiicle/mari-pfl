@@ -34,19 +34,33 @@ $(document).ready(function(){
     });
 
     // typing text animation script
-    var typed = new Typed(".typing", {
-        strings: ["UI/UX Designer", "Graphic Designer", "Web Designer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
+var typed = new Typed(".typing", {
+    strings: [
+        "UI/UX Designer",
+        "Graphic Designer",
+        "Casual Gamer",
+        "Photo Enthusiast",
+        "Coffee-Powered Creator",
+        "Pixel Perfectionist"
+    ],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+});
 
-    var typed = new Typed(".typing-2", {
-        strings: ["UI/UX Designer", "Graphic Designer", "Web Designer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
+var typed2 = new Typed(".typing-2", {
+    strings: [
+      "UI/UX Designer",
+        "Graphic Designer",
+        "Casual Gamer",
+        "Photo Enthusiast",
+        "Coffee-Powered Creator",
+        "Pixel Perfectionist"
+    ],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+});
         
     // owl carousel script
     $('.carousel').owlCarousel({
