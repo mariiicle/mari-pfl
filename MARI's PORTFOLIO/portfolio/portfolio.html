@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariMira | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+    <div class="scroll-up-btn" id="scrollUpBtn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="index.html">Mari<span>Mira</span></a></div>
+            <ul class="menu" id="navMenu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#teams">Team</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="portfolio.html" class="active-link">Portfolio</a></li>
+            </ul>
+            <div class="menu-btn" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="portfolio-hero">
+        <div class="max-width">
+            <div class="inner">
+                <div class="label">✦ My Creative Work</div>
+                <h1>Portfolio Showcase</h1>
+                <p>A curated collection of my design work — from brand identities and UI screens to photos and visual stories.</p>
+                <a href="index.html" class="hero-back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <div class="max-width">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+                <button class="filter-btn" data-filter="photo">Photo &amp; Video</button>
+                <button class="filter-btn" data-filter="ui">UI/UX Design</button>
+                <button class="filter-btn" data-filter="social">3D</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid">
+        <div class="max-width">
+            <div class="grid-wrapper" id="portfolioGrid">
+
+                <!-- Card 1 - Graphic Design -->
+                <div class="port-card" data-category="graphic">
+                    <div class="card-thumb">
+                        <img src="images/portfolio/GR-1.png" alt="Brand Identity" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="placeholder" style="display:none"><i class="fas fa-paint-brush"></i><span>Branding</span></div>
+                        <span class="card-category-badge">Graphic Design</span>
+                        <div class="card-overlay">
+                            <div class="overlay-btn" onclick="openLightbox('NCST Door Signage','A full brand identity system including logo, color palette, and typography guidelines crafted to provide information, such as instructions. It helps guide people, improve organization, and ensure clear communication within a space.', event)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Signage</h3>
+                        <p>Door signage is a display used to identify rooms or provide directions and instructions within a space.</p>
+                        <div class="card-tags">
+                            <span class="tag">Illustrator</span>
+                            <span class="tag">Branding</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 - UI/UX -->
+                <div class="port-card" data-category="ui">
+                    <div class="card-thumb">
+                        <img src="images/portfolio/DDG.jpg" alt="Game UI" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="placeholder" style="display:none"><i class="fas fa-gamepad"></i><span>Game UI</span></div>
+                        <span class="card-category-badge">UI/UX Design</span>
+                        <div class="card-overlay">
+                            <div class="overlay-btn" onclick="openLightbox('Game UI Design','Designed an intuitive and visually immersive UI system for a 2D game — covering menus, HUDs, inventory, and dialogue boxes with cohesive visual language.','fas fa-gamepad', event)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>[Game] DODGE THE CREEPS</h3>
+                        <p>Immersive HUD, menus, and inventory screens designed for a 2D game project.</p>
+                        <div class="card-tags">
+                            <span class="tag">Canva</span>
+                            <span class="tag">Adobe Photoshop</span>
+                            <span class="tag">Godot Engine</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 - UI/UX -->
+                <div class="port-card" data-category="ui">
+                    <div class="card-thumb">
+                        <img src="images/portfolio/SPC.jpg" alt="Game UI" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="placeholder" style="display:none"><i class="fas fa-gamepad"></i><span>Game UI</span></div>
+                        <span class="card-category-badge">UI/UX Design</span>
+                        <div class="card-overlay">
+                            <div class="overlay-btn" onclick="openLightbox('Game UI Design','Designed an intuitive and visually immersive UI system for a 2D game — covering menus, HUDs, inventory, and dialogue boxes with cohesive visual language.','fas fa-gamepad', event)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>[Game] SPACESHOOTER</h3>
+                        <p>Immersive HUD, menus, and inventory screens designed for a 2D game project.</p>
+                        <div class="card-tags">
+                            <span class="tag">Canva</span>
+                            <span class="tag">Adobe Photoshop</span>
+                            <span class="tag">Godot Engine</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Card 2 - UI/UX -->
+                <div class="port-card" data-category="ui">
+                    <div class="card-thumb">
+                        <img src="images/portfolio/DINO.jpg" alt="Game UI" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="placeholder" style="display:none"><i class="fas fa-gamepad"></i><span>Game UI</span></div>
+                        <span class="card-category-badge">UI/UX Design</span>
+                        <div class="card-overlay">
+                            <div class="overlay-btn" onclick="openLightbox('Game UI Design','Designed an intuitive and visually immersive UI system for a 2D game — covering menus, HUDs, inventory, and dialogue boxes with cohesive visual language.','fas fa-gamepad', event)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>[Game] DINO</h3>
+                        <p>Immersive HUD, menus, and inventory screens designed for a 2D game project.</p>
+                        <div class="card-tags">
+                            <span class="tag">Canva</span>
+                            <span class="tag">Adobe Photoshop</span>
+                            <span class="tag">Godot Engine</span>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Card 3 - Photo & Video -->
+                <div class="port-card" data-category="photo">
+                    <div class="card-thumb">
+                        <img src="images/portfolio/IMG.JPG" alt="Photo Editing" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="placeholder" style="display:none"><i class="fas fa-camera"></i><span>Photography</span></div>
+                        <span class="card-category-badge">Photo &amp; Video</span>
+                        <div class="card-overlay">
+                            <div class="overlay-btn" onclick="openLightbox('Photography','I document events by capturing important moments through photos, videos, and notes to support reporting, promotion, and record-keeping.', event)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Event Documentator</h3>
+                        <p>Capturing and recording key moments of an event through photos, videos, and written reports for reporting, promotion, and archival purposes.</p>
+                        <div class="card-tags">
+                            <span class="tag">Documentation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 - 3D -->
+                <div class="port-card" data-category="social">
+                    <div class="card-thumb">
+                        <img src="images/portfolio/3d-1.png" alt="3D" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="placeholder" style="display:none"><i class="fas fa-hashtag"></i><span>3D</span></div>
+                        <span class="card-category-badge">3D</span>
+                        <div class="card-overlay">
+                            <div class="overlay-btn" onclick="openLightbox('3D Industrial Building', 'A 3D model of an industrial building is a digital representation of a facility like a factory or warehouse, showing its structure, layout, and key components. It is used for visualization, planning, and design purposes.', event)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>3D Industrial Building Asset</h3>
+                        <p>A 3D representation for Industrial Building</p>
+                        <div class="card-tags">
+                            <span class="tag">SketchUp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 - Graphic Design -->
+                <div class="port-card" data-category="graphic">
+                    <div class="card-thumb">
+                        <img src="images/portfolio/GR-3.png" alt="Publication Layout" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="placeholder" style="display:none"><i class="fas fa-book-open"></i><span>Layout Design</span></div>
+                        <span class="card-category-badge">Graphic Design</span>
+                        <div class="card-overlay">
+                            <div class="overlay-btn" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Publication Layout Design</h3>
+                        <p>Editorial spreads for a school publication with clean grid-based typography.</p>
+                        <div class="card-tags">
+                            <span class="tag">InDesign</span>
+                            <span class="tag">Editorial</span>
+                            <span class="tag">Grid Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 - Photo & Video -->
+                <div class="port-card" data-category="photo">
+                    <div class="card-thumb">
+                        <img src="images/portfolio/VID.png" alt="Video Editing" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="placeholder" style="display:none"><i class="fas fa-film"></i><span>Video Editing</span></div>
+                        <span class="card-category-badge">Photo &amp; Video</span>
+                        <div class="card-overlay">
+                            <div class="overlay-btn" onclick="openLightbox('Event Highlight Reel','A dynamic event highlight reel featuring motion graphics, transitions, and color-graded footage — edited for social media and presentation use.','fas fa-film', event)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Event Highlight Reel</h3>
+                        <p>Dynamic event video with motion graphics, transitions, and cinematic color grades.</p>
+                        <div class="card-tags">
+                            <span class="tag">Premiere Pro</span>
+                            <span class="tag">After Effects</span>
+                            <span class="tag">Motion Graphics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 - UI/UX -->
+                <div class="port-card" data-category="ui">
+                    <div class="card-thumb">
+                        <img src="images/portfolio/CPS.png" alt="App UX" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="placeholder" style="display:none"><i class="fas fa-mobile-alt"></i><span>Website</span></div>
+                        <span class="card-category-badge">UI/UX Design</span>
+                        <div class="card-overlay">
+                            <div class="overlay-btn" onclick="openLightbox('PlanWise','An online tool for architecture students from the Alma Mater', event)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Capstone Project</h3>
+                        <p>Implementation of Digital Architectural Design Initial Planner for Architect students in NCST.</p>
+                        <div class="card-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JS</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Card 7 - UI/UX -->
+                <div class="port-card" data-category="ui">
+                    <div class="card-thumb">
+                        <img src="images/portfolio/HG.png" alt="App UX" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="placeholder" style="display:none"><i class="fas fa-mobile-alt"></i><span>Website</span></div>
+                        <span class="card-category-badge">UI/UX Design</span>
+                        <div class="card-overlay">
+                            <div class="overlay-btn" onclick="openLightbox('Hungry Gods', 'an online website developed as a project for System Analysis and Design, which promotes the products of the target client and showcases a user-friendly interface for browsing and engagement.', event)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>System Analysis and Design Project</h3>
+                        <p>An online website that promotes the products of the target client.</p>
+                        <div class="card-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="port-card" data-category="ui">
+                    <div class="card-thumb">
+                        <img src="images/portfolio/ERP.png" alt="Game UI" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="placeholder" style="display:none"><i class="fas fa-gamepad"></i><span>Website</span></div>
+                        <span class="card-category-badge">UI/UX Design</span>
+                        <div class="card-overlay">
+                            <div class="overlay-btn" onclick="openLightbox('Stellarwind Expeditions','Designed wireframes for an Enterprise Resource Planning (ERP) project, focusing on structured layouts and user-friendly interface planning.', event)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Enterprise Resource Planning Project</h3>
+                        <p>A hypothetical company with a well-structured system designed for a travel agency.</p>
+                        <div class="card-tags">
+                            <span class="tag">Wireframe</span>
+                            <span class="tag">Adobe Photoshop</span>
+                            <span class="tag">Canva</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 - Social Media -->
+                <div class="port-card" data-category="social">
+                    <div class="card-thumb">
+                        <img src="images/portfolio/3d-2.png" alt="Brand Socials" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="placeholder" style="display:none"><i class="fas fa-bullhorn"></i><span>3D</span></div>
+                        <span class="card-category-badge">3D</span>
+                        <div class="card-overlay">
+                            <div class="overlay-btn" onclick="openLightbox('3D Commercial Building','A 3D model of a commercial building is a digital representation of spaces like offices, malls, or shops, showcasing the layout, structure, and design. It is used for visualization, planning, and presentation.', event)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>3D Commercial Building Asset</h3>
+                        <p>A 3D representation for Commercial Building.</p>
+                        <div class="card-tags">
+                            <span class="tag">SketchUp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 - Graphic Design -->
+                <div class="port-card" data-category="graphic">
+                    <div class="card-thumb">
+                        <img src="images/portfolio/GR-2.png" alt="Event Poster" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="placeholder" style="display:none"><i class="fas fa-star"></i><span>Event Poster</span></div>
+                        <span class="card-category-badge">Graphic Design</span>
+                        <div class="card-overlay">
+                            <div class="overlay-btn" onclick="openLightbox('Event Poster Series','Bold and eye-catching poster designs for school and community events — each tailored with custom illustrations, strong typography, and vibrant color palettes.','fas fa-star', event)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Event Poster Series</h3>
+                        <p>Bold, vibrant poster designs for school and community events with custom type.</p>
+                        <div class="card-tags">
+                            <span class="tag">Illustrator</span>
+                            <span class="tag">Print Design</span>
+                            <span class="tag">Illustration</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="max-width">
+            <div class="inner">
+                <div class="stat-item">
+                    <div class="num">20<span>+</span></div>
+                    <div class="label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num">3<span>+</span></div>
+                    <div class="label">Years of Practice</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num">5<span>+</span></div>
+                    <div class="label">Tools Mastered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num">100<span>%</span></div>
+                    <div class="label">Creative Passion</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="max-width">
+            <h2>Like what you see?</h2>
+            <p>Let's work together and turn your ideas into something beautiful.</p>
+            <a href="index.html#contact" class="cta-btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <span>Created by Marithes Miraflor | <span class="far fa-copyright"></span> 2026 All rights reserved</span>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox">
+        <div class="lightbox-box">
+            <button class="lightbox-close" id="lightboxCloseBtn"><i class="fas fa-times"></i></button>
+            <div class="lightbox-img-placeholder" id="lbPlaceholder">
+                <img id="lbImage" src="" alt="" style="display:none">
+                <i class="fas fa-image" id="lbFallbackIcon"></i>
+            </div>
+            <div class="lightbox-body">
+                <h3 id="lbTitle">Project Title</h3>
+                <p id="lbDesc">Project description.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
