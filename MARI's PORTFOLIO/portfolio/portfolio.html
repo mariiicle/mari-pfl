@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MariMira | Portfolio</title>
+    <title>Marithes Miraflor | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="portfolio.css">
+    <!-- Three.js for 3D GLB rendering (requires localhost/http) -->
+    <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
 
@@ -19,7 +24,7 @@
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="max-width">
-            <div class="logo"><a href="index.html">Mari<span>Mira</span></a></div>
+            <div class="logo"><a href="index.html">Mioua<span>cle</span></a></div>
             <ul class="menu" id="navMenu">
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
@@ -74,7 +79,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-paint-brush"></i><span>Branding</span></div>
                         <span class="card-category-badge">Graphic Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('NCST Door Signage','A full brand identity system including logo, color palette, and typography guidelines crafted to provide information, such as instructions. It helps guide people, improve organization, and ensure clear communication within a space.', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/GR-1-final.png" onclick="openLightbox('NCST Door Signage','A full brand identity system including logo, color palette, and typography guidelines crafted to provide information, such as instructions. It helps guide people, improve organization, and ensure clear communication within a space.', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -95,7 +100,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-book-open"></i><span>Layout Design</span></div>
                         <span class="card-category-badge">Graphic Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/8-final.png" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -116,7 +121,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-book-open"></i><span>Layout Design</span></div>
                         <span class="card-category-badge">Graphic Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/9-final.png" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -137,7 +142,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-book-open"></i><span>Layout Design</span></div>
                         <span class="card-category-badge">Graphic Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/10-final.png" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -158,7 +163,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-book-open"></i><span>Layout Design</span></div>
                         <span class="card-category-badge">Graphic Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/11-final.png" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -179,7 +184,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-book-open"></i><span>Layout Design</span></div>
                         <span class="card-category-badge">Graphic Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/12-final.png" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -200,7 +205,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-book-open"></i><span>Layout Design</span></div>
                         <span class="card-category-badge">Graphic Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/13-final.png" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -221,7 +226,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-book-open"></i><span>Layout Design</span></div>
                         <span class="card-category-badge">Graphic Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/14-final.png" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -243,7 +248,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-gamepad"></i><span>Game UI</span></div>
                         <span class="card-category-badge">UI/UX Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Game UI Design','Designed an intuitive and visually immersive UI system for a 2D game — covering menus, HUDs, inventory, and dialogue boxes with cohesive visual language.','fas fa-gamepad', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/DDG-final.jpg" onclick="openLightbox('Game UI Design','Designed an intuitive and visually immersive UI system for a 2D game — covering menus, HUDs, inventory, and dialogue boxes with cohesive visual language.','fas fa-gamepad', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -265,7 +270,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-gamepad"></i><span>Game UI</span></div>
                         <span class="card-category-badge">UI/UX Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Game UI Design','Designed an intuitive and visually immersive UI system for a 2D game — covering menus, HUDs, inventory, and dialogue boxes with cohesive visual language.','fas fa-gamepad', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/SPC-final.jpg" onclick="openLightbox('Game UI Design','Designed an intuitive and visually immersive UI system for a 2D game — covering menus, HUDs, inventory, and dialogue boxes with cohesive visual language.','fas fa-gamepad', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -287,7 +292,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-gamepad"></i><span>Game UI</span></div>
                         <span class="card-category-badge">UI/UX Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Game UI Design','Designed an intuitive and visually immersive UI system for a 2D game — covering menus, HUDs, inventory, and dialogue boxes with cohesive visual language.','fas fa-gamepad', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/DINO-final.jpg" onclick="openLightbox('Game UI Design','Designed an intuitive and visually immersive UI system for a 2D game — covering menus, HUDs, inventory, and dialogue boxes with cohesive visual language.','fas fa-gamepad', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -311,7 +316,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-camera"></i><span>Photography</span></div>
                         <span class="card-category-badge">Photo &amp; Video</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Photography','I document events by capturing important moments through photos, videos, and notes to support reporting, promotion, and record-keeping.', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/IMG-final.JPG" onclick="openLightbox('Photography','I document events by capturing important moments through photos, videos, and notes to support reporting, promotion, and record-keeping.', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -332,7 +337,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-hashtag"></i><span>3D</span></div>
                         <span class="card-category-badge">3D</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('3D Industrial Building', 'A 3D model of an industrial building is a digital representation of a facility like a factory or warehouse, showing its structure, layout, and key components. It is used for visualization, planning, and design purposes.', event)">
+                            <div class="overlay-btn" data-lightbox-type="3d" data-lightbox-model="images/portfolio/3d/industry-factory.glb" onclick="openLightbox('3D Industrial Building', 'A 3D model of an industrial building is a digital representation of a facility like a factory or warehouse, showing its structure, layout, and key components. It is used for visualization, planning, and design purposes.', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -353,7 +358,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-book-open"></i><span>Layout Design</span></div>
                         <span class="card-category-badge">Graphic Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/GR-3-final.png" onclick="openLightbox('Publication Layout Design','Editorial layout design for a school publication — managing grid systems, typographic hierarchy, and visual storytelling across multiple spreads.','fas fa-book-open', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -375,7 +380,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-film"></i><span>Video Editing</span></div>
                         <span class="card-category-badge">Photo &amp; Video</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Event Highlight Reel','A dynamic event highlight reel featuring motion graphics, transitions, and color-graded footage — edited for social media and presentation use.','fas fa-film', event)">
+                            <div class="overlay-btn" data-lightbox-type="video" data-lightbox-video="images/portfolio/video/25thFWEEK.mp4" onclick="openLightbox('Event Highlight Reel','A dynamic event highlight reel featuring motion graphics, transitions, and color-graded footage — edited for social media and presentation use.','fas fa-film', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -398,7 +403,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-mobile-alt"></i><span>Website</span></div>
                         <span class="card-category-badge">UI/UX Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('PlanWise','An online tool for architecture students from the Alma Mater', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/CPS-final.png" onclick="openLightbox('PlanWise','An online tool for architecture students from the Alma Mater', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -420,7 +425,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-mobile-alt"></i><span>Website</span></div>
                         <span class="card-category-badge">UI/UX Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Hungry Gods', 'an online website developed as a project for System Analysis and Design, which promotes the products of the target client and showcases a user-friendly interface for browsing and engagement.', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/HG-final.png" onclick="openLightbox('Hungry Gods', 'an online website developed as a project for System Analysis and Design, which promotes the products of the target client and showcases a user-friendly interface for browsing and engagement.', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -441,7 +446,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-gamepad"></i><span>Website</span></div>
                         <span class="card-category-badge">UI/UX Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Stellarwind Expeditions','Designed wireframes for an Enterprise Resource Planning (ERP) project, focusing on structured layouts and user-friendly interface planning.', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/ERP-final.png" onclick="openLightbox('Stellarwind Expeditions','Designed wireframes for an Enterprise Resource Planning (ERP) project, focusing on structured layouts and user-friendly interface planning.', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -464,7 +469,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-bullhorn"></i><span>3D</span></div>
                         <span class="card-category-badge">3D</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('3D Commercial Building','A 3D model of a commercial building is a digital representation of spaces like offices, malls, or shops, showcasing the layout, structure, and design. It is used for visualization, planning, and presentation.', event)">
+                            <div class="overlay-btn" data-lightbox-type="3d" data-lightbox-model="images/portfolio/3d/building-school.glb" onclick="openLightbox('3D Commercial Building','A 3D model of a commercial building is a digital representation of spaces like offices, malls, or shops, showcasing the layout, structure, and design. It is used for visualization, planning, and presentation.', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -485,7 +490,7 @@
                         <div class="placeholder" style="display:none"><i class="fas fa-star"></i><span>Event Poster</span></div>
                         <span class="card-category-badge">Graphic Design</span>
                         <div class="card-overlay">
-                            <div class="overlay-btn" onclick="openLightbox('Event Poster Series','Bold and eye-catching poster designs for school and community events — each tailored with custom illustrations, strong typography, and vibrant color palettes.','fas fa-star', event)">
+                            <div class="overlay-btn" data-lightbox-img="images/portfolio/final/GR-2-final.png" onclick="openLightbox('Event Poster Series','Bold and eye-catching poster designs for school and community events — each tailored with custom illustrations, strong typography, and vibrant color palettes.','fas fa-star', event)">
                                 <i class="fas fa-eye"></i>
                             </div>
                         </div>
@@ -547,9 +552,19 @@
     <div class="lightbox-overlay" id="lightbox">
         <div class="lightbox-box">
             <button class="lightbox-close" id="lightboxCloseBtn"><i class="fas fa-times"></i></button>
+            <!-- Image / icon view -->
             <div class="lightbox-img-placeholder" id="lbPlaceholder">
-                <img id="lbImage" src="" alt="" style="display:none">
+                <img id="lbImage" src="" alt="">
                 <i class="fas fa-image" id="lbFallbackIcon"></i>
+            </div>
+            <!-- 3D model view -->
+            <div id="lb3DContainer">
+                <canvas id="lbCanvas3D"></canvas>
+                <div id="lb3DError" aria-live="polite"></div>
+            </div>
+            <!-- Video view -->
+            <div id="lbVideoContainer">
+                <video id="lbVideo" controls playsinline preload="metadata"></video>
             </div>
             <div class="lightbox-body">
                 <h3 id="lbTitle">Project Title</h3>
