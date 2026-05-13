@@ -24,6 +24,7 @@
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* custom scroll bar */
@@ -45,6 +46,7 @@ body {
     font-family: 'Outfit', sans-serif;
     background: var(--cream);
     color: var(--ink);
+    overflow-x: hidden;
 }
 
 /* all similar content styling codes */
@@ -1423,24 +1425,21 @@ footer:after {
     .navbar .logo a{
         font-size: 20px;
     }
-    /* Mobile hero — true vertical centering, no dead space */
+    /* Mobile hero */
     .home {
         min-height: 100svh;
         height: 100svh;
         align-items: center;
-        background-position: 55% top;
-    }
-    .home-bg-img {
-        object-position: 65% top;
+        background-position: 55% center;
+        background-size: cover;
     }
     .home::before {
         background: linear-gradient(
-            160deg,
-            rgba(18, 12, 38, 0.92) 0%,
-            rgba(48, 34, 98, 0.86) 30%,
-            rgba(72, 52, 130, 0.72) 55%,
-            rgba(74, 143, 204, 0.38) 80%,
-            rgba(74, 143, 204, 0.10) 100%
+            180deg,
+            rgba(18, 12, 38, 0.75) 0%,
+            rgba(48, 34, 98, 0.70) 40%,
+            rgba(72, 52, 130, 0.60) 70%,
+            rgba(74, 143, 204, 0.20) 100%
         );
     }
     .home .max-width {
@@ -1448,24 +1447,28 @@ footer:after {
         height: 100svh;
         padding-top: 80px;
         padding-bottom: 40px;
-        justify-content: center;
+        justify-content: flex-end;
+        padding-bottom: 60px;
     }
+    .home .home-content {
+        max-width: 100%;
     }
     .home .home-content .text-1{
         font-size: 10px;
         letter-spacing: 0.18em;
     }
     .home .home-content .text-2{
-        font-size: 36px;
-        letter-spacing: 0;
+        font-size: clamp(2.2rem, 10vw, 3rem);
+        letter-spacing: -0.02em;
     }
     .home .home-content .text-3{
         font-size: 18px;
+        margin-top: 10px;
     }
     .home .home-content a{
         font-size: 13px;
-        padding: 10px 20px;
-        margin-top: 18px;
+        padding: 10px 22px;
+        margin-top: 20px;
     }
     .about .about-content .left img{
         height: 240px;
@@ -1553,8 +1556,7 @@ footer:after {
         font-size: 12px;
         padding: 14px 16px;
     }
-
-/* QR Modal - View Online alt section */
+} 
 .qr-modal-alt {
     display: flex;
     align-items: center;
