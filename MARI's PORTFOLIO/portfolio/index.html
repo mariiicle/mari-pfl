@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
@@ -52,12 +52,12 @@
     <!-- about section start -->
     <section class="about" id="about">
         <div class="max-width">
-            <h2 class="title">About Me</h2>
+            <h2 class="title reveal">About Me</h2>
             <div class="about-content">
-                <div class="column left">
+                <div class="column left reveal-left">
                     <img src="images/2.png" alt="">
                 </div>
-                <div class="column right">
+                <div class="column right reveal-right">
                     <div class="text">I'm Mari and I'm a <span class="typing-2"></span></div>
                     <p>Hi! I'm Mari, a BSIT graduate with a focus on graphic design. I blend technical skills with creativity to create engaging and visually compelling digital experiences. My work includes graphic design, video editing, and photography, allowing me to deliver well-rounded visual solutions. I'm always exploring new trends and tools to keep my work fresh, relevant, and user-focused.</p>
                 <div class="qr-reveal-wrapper">
@@ -75,23 +75,23 @@
     <!-- services section start -->
     <section class="services" id="services">
         <div class="max-width">
-            <h2 class="title">Services</h2>
-            <div class="serv-content">
-                <div class="card">
+            <h2 class="title reveal">Services</h2>
+            <div class="serv-content reveal-stagger">
+                <div class="card reveal-scale">
                     <div class="box">
                         <i class="fas fa-paint-brush"></i>
                         <div class="text">Graphic Design</div>
                         <p>Transform your ideas into compelling visual experiences. From brand identity to marketing materials, I create designs that effectively communicate your message and engage your audience.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card reveal-scale">
                     <div class="box">
                         <i class="fas fa-camera"></i>
                         <div class="text">Photo & Video Editing</div>
                         <p>Professional photo and video editing services to enhance your visual content. From color grading to special effects, I ensure your media stands out with polished, professional quality.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card reveal-scale">
                     <div class="box">
                         <i class="fas fa-code"></i>
                         <div class="text">Website Design</div>
@@ -105,16 +105,16 @@
     <!-- skills section start -->
     <section class="skills" id="skills">
         <div class="max-width">
-            <h2 class="title">Skills</h2>
+            <h2 class="title reveal">Skills</h2>
             <div class="skills-content">
-                <div class="column left">
+                <div class="column left reveal-left">
                     <div class="text">Professional Experience</div>
                     <p>I bring experience in editing, photography, and videography, allowing me to create cohesive and engaging visual content across different platforms. I’ve also designed UI for games, focusing on user-friendly layouts and visually appealing interfaces that enhance the overall player experience. Alongside this, I’ve managed digital content for social media, developing materials that connect effectively with audiences. Through these projects, I’ve built strong creative judgment and the ability to adapt across various design needs.</p>
                     <a href="portfolio.html">
                         <button class="see-btn">View Portfolio</button>
                     </a>
                 </div>
-                <div class="column right">
+                <div class="column right reveal">
                     <div class="bars">
                         <div class="info">
                             <span>Publication Layout Design</span>
@@ -158,8 +158,8 @@
     <!-- teams section -->
     <section class="teams" id="teams">
         <div class="max-width">
-            <h2 class="title">Professional Network</h2>
-            <div class="carousel owl-carousel">
+            <h2 class="title reveal">Professional Network</h2>
+            <div class="carousel owl-carousel reveal">
                 <div class="card">
                     <div class="box">
                         <img src="images/profile-6.png" alt="">
@@ -202,9 +202,9 @@
     <!-- contact section -->
     <section class="contact" id="contact">
         <div class="max-width">
-            <h2 class="title">Contact</h2>
+            <h2 class="title reveal">Contact</h2>
             <div class="contact-content">
-                <div class="column left">
+                <div class="column left reveal-left">
                     <div class="text">Contact Information</div>
                     <p>Interested in working together? I'd love to hear about your project and discuss how we can collaborate to achieve your goals.</p>
                     <div class="icons">
@@ -224,8 +224,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column right">
-                    <div class="text">Send a Message</div>
+                <div class="column right reveal-right">
                     <form id="contactForm">
                         <div class="fields">
                             <div class="field name">
@@ -338,7 +337,6 @@
                 });
         });
     </script>
-</body>
     <script>
         function openQRModal() {
             const modal = document.getElementById('qrModal');
@@ -355,6 +353,22 @@
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeQRModal();
         });
+    </script>
+    <script>
+        // ── Scroll Reveal ──────────────────────────────────────────────
+        (function () {
+            const selectors = '.reveal, .reveal-left, .reveal-right, .reveal-scale';
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            document.querySelectorAll(selectors).forEach(el => observer.observe(el));
+        })();
     </script>
 </body>
 </html>

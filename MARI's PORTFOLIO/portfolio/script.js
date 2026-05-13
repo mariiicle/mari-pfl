@@ -84,4 +84,19 @@ var typed2 = new Typed(".typing-2", {
             }
         }
     });
+
+    // Scroll-triggered reveals (sections below the fold)
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-in-view');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+        document.querySelectorAll('section:not(#home)').forEach(function (sec) {
+            sec.classList.add('js-scroll-reveal');
+            revealObserver.observe(sec);
+        });
+    }
 });

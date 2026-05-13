@@ -346,3 +346,19 @@ document.getElementById('lightboxCloseBtn').addEventListener('click', function (
 document.getElementById('lightbox').addEventListener('click', function (e) {
     if (e.target === this) closeLightbox();
 });
+
+// Scroll-triggered surfaces (hero, filters, grid, stats, CTA)
+(function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var nodes = document.querySelectorAll('.filter-bar, .portfolio-grid, .stats-bar, .cta-section');
+    if (!nodes.length) return;
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-in-view');
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    nodes.forEach(function (el) {
+        el.classList.add('js-scroll-surface');
+        io.observe(el);
+    });
+})();
