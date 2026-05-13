@@ -258,7 +258,7 @@ section .title::after{
 .home{
     display: flex;
     align-items: stretch;
-    background: none;
+    background: url("images/1.png") no-repeat 70% top / cover;
     min-height: 100vh;
     height: auto;
     color: #fff;
@@ -266,19 +266,8 @@ section .title::after{
     position: relative;
     overflow: hidden;
 }
-.home-bg-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    z-index: 0;
-    display: block;
-    pointer-events: none;
-    user-select: none;
-}
+/* remove unused img rule */
+.home-bg-img { display: none; }
 /* Readability on the left; stronger wash, artwork opens toward the right */
 .home::before {
     content: "";
@@ -1365,6 +1354,7 @@ footer:after {
     .home {
         min-height: 100svh;
         height: 100svh;
+        background-position: 65% top;
     }
     .home-bg-img {
         object-position: 60% top;
@@ -1438,6 +1428,7 @@ footer:after {
         min-height: 100svh;
         height: 100svh;
         align-items: center;
+        background-position: 55% top;
     }
     .home-bg-img {
         object-position: 65% top;
