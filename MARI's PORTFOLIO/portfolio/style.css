@@ -1351,6 +1351,15 @@ footer:after {
         font-size: 28px;
         margin-bottom: 30px;
     }
+    .home {
+        min-height: 100svh;
+    }
+    .home .max-width {
+        min-height: 100svh;
+        padding-top: 80px;
+        padding-bottom: 48px;
+        justify-content: center;
+    }
     .home .home-content .text-2{
         font-size: 48px;
     }
@@ -1407,6 +1416,30 @@ footer:after {
     }
     .navbar .logo a{
         font-size: 20px;
+    }
+    /* Mobile hero — true vertical centering, no dead space */
+    .home {
+        min-height: 100svh;
+        align-items: center;
+    }
+    .home::before {
+        background: linear-gradient(
+            160deg,
+            rgba(18, 12, 38, 0.92) 0%,
+            rgba(48, 34, 98, 0.86) 30%,
+            rgba(72, 52, 130, 0.72) 55%,
+            rgba(74, 143, 204, 0.38) 80%,
+            rgba(74, 143, 204, 0.10) 100%
+        );
+    }
+    .home .max-width {
+        min-height: 100svh;
+        padding-top: 80px;
+        padding-bottom: 48px;
+        justify-content: center;
+    }
+    .home .home-content {
+        max-width: 100%;
     }
     .home .home-content .text-1{
         font-size: 10px;
