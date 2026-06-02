@@ -93,7 +93,7 @@ section .title::after{
 }
 
 /* Title color override for purple bg sections */
-.services .title, .teams .title {
+.services .title, .teams .title, .contact .title {
     color: #ffffff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
 }
@@ -838,16 +838,18 @@ section .title::after{
 }
 
 /* services section */
-.services, .teams{
+.services, .teams, .contact{
     color: #fff;
     background: linear-gradient(165deg, #1a1428 0%, #2a2245 38%, #1e3544 100%);
 }
 .services .title::before,
-.teams .title::before{
+.teams .title::before,
+.contact .title::before{
     background: #D8CEEF;
 }
 .services .title::after,
-.teams .title::after{
+.teams .title::after,
+.contact .title::after{
     background: #4A8FCC;
 }
 .services .serv-content .card{
@@ -1074,113 +1076,201 @@ section .title::after{
 
 /* contact section */
 .contact{
-    background: var(--cream);
+    padding-bottom: 80px;
 }
 .contact .title::after{
     content: "Say Hello!";
-    background: #4A8FCC;
+}
+.contact .contact-content{
+    align-items: stretch;
+    gap: 32px;
 }
 .contact .contact-content .column{
-    width: calc(50% - 30px);
+    width: calc(50% - 16px);
+    flex: 1 1 calc(50% - 16px);
+    min-width: 280px;
 }
-.contact .contact-content .text{
-    font-size: 20px;
-    font-weight: 700;
+.contact-panel,
+.contact .inquiry-panel{
+    height: 100%;
+    padding: 32px 28px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+}
+.contact .panel-header{
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.contact .panel-title{
     font-family: 'Syne', sans-serif;
-    margin-bottom: 20px;
-    color: #1E2A38;
-    letter-spacing: 0.01em;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
 }
-.contact .contact-content .left p{
-    text-align: justify;
-    line-height: 1.7;
-    font-size: 17px;
-    color: #3D4F61;
-    margin-bottom: 20px;
+.contact .panel-desc{
+    font-size: 15px;
+    line-height: 1.65;
+    color: #EDE8F8;
+    margin: 0;
 }
-.contact .contact-content .left .icons{
-    margin: 15px 0;
+.contact .contact-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contact .social-block{
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.contact .social-heading{
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #D8CEEF;
+    margin: 0 0 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.contact .social-links{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contact .contact-content a.social-link,
+.contact .contact-content a.contact-email-link{
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease, background 0.25s ease;
+    border-radius: 12px;
+    padding: 4px 8px 4px 0;
+    margin-left: -8px;
+}
+.contact .contact-content a.social-link:hover,
+.contact .contact-content a.contact-email-link:hover{
+    transform: translateX(6px);
+    background: rgba(255, 255, 255, 0.05);
+}
+.contact .contact-content a.social-link:hover .sub-title,
+.contact .contact-content a.contact-email-link:hover .sub-title{
+    color: #D8CEEF;
 }
 .contact .contact-content .row{
     display: flex;
-    height: 65px;
+    min-height: 58px;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 0;
 }
 .contact .contact-content .row .info{
-    margin-left: 25px;
+    margin-left: 18px;
+    flex: 1;
+    min-width: 0;
 }
 .contact .contact-content .row i{
-    font-size: 28px;
-    color: #4A8FCC;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    flex-shrink: 0;
+    font-size: 22px;
+    color: #D8CEEF;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
     text-align: center;
-    background: #ffffff;
-    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
     transition: all 0.3s ease;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
-.contact .contact-content .row:hover i {
+.contact .contact-content .row:hover i,
+.contact .contact-content a.social-link:hover i,
+.contact .contact-content a.contact-email-link:hover i{
     background: #4A8FCC;
     color: #ffffff;
-    transform: scale(1.1) rotate(10deg);
+    transform: scale(1.05);
 }
 .contact .contact-content .info .head{
     font-weight: 600;
-    color: #1E2A38;
-    font-size: 18px;
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 2px;
 }
 .contact .contact-content .info .sub-title{
-    color: #7A8D9E;
-    font-size: 15px;
-    font-weight: 500;
+    color: rgba(237, 232, 248, 0.85);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+.contact .inquiry-panel form{
+    margin-top: 0;
 }
 .contact .right form .fields{
     display: flex;
-    gap: 15px;
+    gap: 16px;
 }
 .contact .right form .field,
 .contact .right form .fields .field{
-    height: 50px;
+    height: 52px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+}
+.contact .right form .fields .field{
+    flex: 1;
+    min-width: 0;
 }
 .contact .right form .textarea{
-    height: 120px;
+    height: 140px;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 .contact .right form .field input,
 .contact .right form .textarea textarea{
     height: 100%;
     width: 100%;
-    border: 2px solid #EDE8F8;
-    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
     outline: none;
-    padding: 0 15px;
+    padding: 0 16px;
     font-size: 15px;
     font-family: 'Outfit', sans-serif;
     color: #1E2A38;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.04);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.contact .right form .field input::placeholder,
+.contact .right form .textarea textarea::placeholder{
+    color: #7A8D9E;
 }
 .contact .right form .textarea textarea {
-    padding-top: 15px;
+    padding: 14px 16px;
+    line-height: 1.5;
 }
 .contact .right form .field input:focus,
 .contact .right form .textarea textarea:focus{
     border-color: #4A8FCC;
-    box-shadow: 0 0 10px rgba(74, 143, 204, 0.2);
+    box-shadow: 0 0 0 3px rgba(74, 143, 204, 0.25);
 }
 .contact .right form .textarea textarea{
-    padding-top: 10px;
-    resize: none;
+    resize: vertical;
+    min-height: 120px;
 }
 .contact .right form .button-area{
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 4px;
+}
+.contact .right form .button-area button{
+    width: 100% !important;
+    max-width: none;
+    border-radius: 10px;
+    height: 52px;
+}
+.contact .form-status{
+    margin-top: 14px;
 }
 .right form .button-area button{
     color: #fff;
@@ -1334,10 +1424,14 @@ footer:after {
     .skills .skills-content .column,
     .contact .contact-content .column{
         width: 100%;
-        margin-bottom: 35px;
+        flex: 1 1 100%;
+        margin-bottom: 28px;
     }
     .contact .contact-content .column:last-child{
         margin-bottom: 0;
+    }
+    .contact .contact-content{
+        gap: 24px;
     }
 }
 
@@ -1395,8 +1489,12 @@ footer:after {
         max-width: 480px;
     }
     .skills .skills-content .left p,
-    .contact .contact-content .left p{
+    .contact .panel-desc{
         font-size: 15px;
+    }
+    .contact-panel,
+    .contact .inquiry-panel{
+        padding: 26px 22px;
     }
     .contact .right form .fields{
         flex-direction: column;
@@ -1404,6 +1502,7 @@ footer:after {
     }
     .contact .contact-content .column{
         width: 100%;
+        flex: 1 1 100%;
     }
 }
 
@@ -1501,12 +1600,17 @@ footer:after {
         font-size: 13px;
     }
     .skills .skills-content .left .text,
-    .contact .contact-content .text{
-        font-size: 17px;
+    .contact .panel-title{
+        font-size: 1.15rem;
     }
     .skills .skills-content .left p,
-    .contact .contact-content .left p{
+    .contact .panel-desc{
         font-size: 14px;
+    }
+    .contact-panel,
+    .contact .inquiry-panel{
+        padding: 22px 18px;
+        border-radius: 12px;
     }
     .skills .skills-content .right span{
         font-size: 13px;
@@ -1525,10 +1629,11 @@ footer:after {
         font-size: 12px;
     }
     .contact .contact-content .row i{
-        font-size: 20px;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
+        font-size: 18px;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        border-radius: 10px;
     }
     .contact .contact-content .info .head{
         font-size: 15px;
