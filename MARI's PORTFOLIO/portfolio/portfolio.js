@@ -257,6 +257,16 @@ function openLightbox(title, desc, iconOrEvent, maybeEvent) {
     document.getElementById('lbTitle').textContent = title;
     document.getElementById('lbDesc').textContent  = desc;
 
+    const lbPostLink = document.getElementById('lbPostLink');
+    const postUrl    = btn ? btn.getAttribute('data-lightbox-post') : null;
+    if (postUrl) {
+        lbPostLink.href = postUrl;
+        lbPostLink.hidden = false;
+    } else {
+        lbPostLink.hidden = true;
+        lbPostLink.removeAttribute('href');
+    }
+
     if (lbType === '3d' && modelSrc) {
         // ── 3D mode ──
         lbPlaceholder.style.display = 'none';
@@ -334,6 +344,8 @@ function closeLightbox() {
     document.getElementById('lb3DContainer').style.display = 'none';
     document.getElementById('lbVideoContainer').style.display = 'none';
     document.getElementById('lbPlaceholder').style.display = 'flex';
+    document.getElementById('lbPostLink').hidden = true;
+    document.getElementById('lbPostLink').removeAttribute('href');
 }
 
 // X button
